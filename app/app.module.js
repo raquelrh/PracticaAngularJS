@@ -2,5 +2,9 @@
     'use strict';
 
     angular 
-        .module('app', ['ngRoute']);
+        .module('app', [
+            'app.books',
+            'app.authors',
+            'ngRoute'
+        ]);
 })(window.angular);

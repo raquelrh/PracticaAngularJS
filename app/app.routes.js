@@ -8,9 +8,14 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                template: '<b> Práctica de Angular JS con API REST https://fakerestapi.azurewebsites.net/ </b>'
-
+                template: '<b> Práctica de Angular JS con API REST <a href="https://fakerestapi.azurewebsites.net/">Fakerestapi</a> </b>'
             })
+            .when('/books', {
+                template: '<book></book>'
+            })          
+            .when('/authors', {
+                template: '<author></author>'
+            })    
             .otherwise('/');
 
         $locationProvider.html5Mode(true);
