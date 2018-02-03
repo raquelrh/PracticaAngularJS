@@ -14,8 +14,11 @@
                 template: '<book></book>'
             })          
             .when('/authors', {
-                template: '<author></author>'
-            })    
+                template: '<author-page></author-page>'
+            })
+            .when('/authors/:authorId', {
+                template: '<author-detail></author-detail>'
+            })   
             .otherwise('/');
 
         $locationProvider.html5Mode(true);
