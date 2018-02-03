@@ -1,4 +1,21 @@
-<div>
-  Here Books 
-</div> 
+<table>
+  <tr>
+    <th>ID</th>
+    <td>{{$ctrl.book.ID}}</td>
+    <th>Título</th>
+    <td>{{$ctrl.book.Title}}</td>
+    <th>Nº de páginas</th>
+    <td>{{$ctrl.book.PageCount}}</td>
+    <th>Fecha de publicación</th>
+    <td>{{$ctrl.book.PublishDate}}</td>
+  </tr>
+  <tr>
+    <th>Descripción</th>
+    <td colspan="7">{{$ctrl.book.Description.substr(0,100)}}</td>
+  </tr>
+  <tr>
+    <th>Extracto</th>
+    <td colspan="7">{{$ctrl.book.Excerpt.substr(0,100)}}</td>
+  </tr>
+</table>
 <hr>
