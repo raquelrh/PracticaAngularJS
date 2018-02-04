@@ -23,7 +23,8 @@
     ctrl.$onInit = onInit;
 
     function onInit() {
-      booksService.getBook($routeParams.id)
+      //alert("BookDetailController.onInit " + JSON.stringify($routeParams));
+      booksService.getBook($routeParams.bookId)
         .then(function(data) {
           ctrl.book = data;
         });
