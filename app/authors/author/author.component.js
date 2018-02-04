@@ -16,6 +16,6 @@
       return component;
     }
   
-    function AuthorController() { }
+    function AuthorController() {}
   })(window.angular);
 

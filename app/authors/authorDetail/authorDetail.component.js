@@ -30,12 +30,12 @@
           });
       }
   
-      function getAuthorBook(id) {
-        authorsService.getAuthorBook(id)
-          .then(function (data) {
-            ctrl.book = data;
-          });
-      }
+      // function getAuthorBook(id) {
+      //   authorsService.getAuthorBook(id)
+      //     .then(function (data) {
+      //       ctrl.book = data;
+      //     });
+      //}
     }
   })(window.angular);
   
