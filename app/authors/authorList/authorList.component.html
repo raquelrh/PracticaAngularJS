@@ -1,4 +1,6 @@
-<div ng-repeat="author in $ctrl.authors | filter:$ctrl.filter | orderBy:$ctrl.orderBy">
+<!-- <div ng-repeat="author in $ctrl.authors | filter:$ctrl.filter | orderBy:$ctrl.orderBy"> -->
+<div ng-repeat="author in $ctrl.authors">
     <author author="author"></author>
-    <button type="button" ng-click="$ctrl.viewAuthorDetails(author.id)">Details</button>
-</div>
+    <button type="button" ng-click="$ctrl.viewAuthorDetails(author.ID)">Detalle</button>
+</div> 
+

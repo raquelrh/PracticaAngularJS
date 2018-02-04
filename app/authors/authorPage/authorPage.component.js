@@ -19,38 +19,42 @@
   
     function AuthorPageController(authorsService) {
       var ctrl = this;
-      ctrl.onFilter = onFilter;
-      ctrl.onOrderBy = onOrderBy;
+      // ctrl.onFilter = onFilter;
+      // ctrl.onOrderBy = onOrderBy;
       ctrl.$onInit = onInit;
   
-      function onFilter(filter) {
-        ctrl.filter = filter;
-      }
+      // function onFilter(filter) {
+      //   ctrl.filter = filter;
+      // }
   
-      function onOrderBy(option) {
-        ctrl.orderBy = option;
-      }
+      // function onOrderBy(option) {
+      //   ctrl.orderBy = option;
+      // }
   
       function onInit() {
-        ctrl.fields = {
-            FirstName: '',
-            LastName: ''
-        };
-        ctrl.options = [
-          {
-            text: 'FirstName',
-            value: 'FirstName'
-          }, {
-            text: 'LastName',
-            value: 'LastName'
-          }
-        ];
-  
         authorsService.getAuthors()
-          .then(function (data) {
+          .then(function(data) {
             ctrl.authors = data;
-          });
+        });
       }
+
+      // function onInit() {
+      //   ctrl.fields = {
+      //     FirstName: '',
+      //     LastName: ''
+      //   };
+        // ctrl.options = [
+        //   {
+        //     text: 'FirstName',
+        //     value: 'firstname'
+        //   }, {
+        //     text: 'lastname',
+        //     value: 'lastname'
+        //   }
+        // ];
+  
+        // 
+      //}
     }
   })(window.angular);
   
