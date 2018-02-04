@@ -1,0 +1,10 @@
+<tr>
+  <div ng-repeat="(key, value) in $ctrl.filter">
+    <label>     
+      {{key}}:
+    </label>
+    <input type="text" ng-model="$ctrl.filter[key]" ng-change="$ctrl.onFilter({filter: $ctrl.filter})">
+    <br>
+  </div>
+</tr>
+<hr>
