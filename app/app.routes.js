@@ -16,6 +16,9 @@
       .when('/books/:bookId', {
         template: '<book-detail></book-detail>'
       })
+      .when('/books/create', {
+        template: '<book-create></book-create>'
+      })
       .when('/authors', {
         template: '<author-page></author-page>'
       })

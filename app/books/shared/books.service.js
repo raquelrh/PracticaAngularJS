@@ -13,8 +13,9 @@
     var urlRoot = 'https://fakerestapi.azurewebsites.net/api/';
 
     var service = {
-      getBook: getBook,
       getBooks: getBooks,
+      getBook: getBook,
+      postBook: postBook,
     }
 
     return service;
@@ -29,6 +30,19 @@
       return $http.get(urlRoot + 'Books/' + bookId)
         .then(complete)
         .catch(failed);
+    }
+
+    function postBook(book) {
+      return $http.post(urlRoot + 'Books/')
+        .then(completePost)
+        .catch(failed);
+    }
+
+    function completePost(response) {
+      if (response.data != null && response.data.ID != null) {
+        alert("Nuevo libro creado correctamente con ID: " + response.data.ID);
+      }
+      return response.data;
     }
 
     function complete(response) {
