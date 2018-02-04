@@ -7,7 +7,7 @@
   
     function authorDetail() {
       var component = {
-        templateUrl: '/app/authors/authorDetail/authorDetail.component.html',
+        templateUrl: 'app/authors/authorDetail/authorDetail.component.html',
         controller: AuthorDetailController
       };
       return component;
@@ -23,10 +23,11 @@
       ctrl.$onInit = onInit;
   
       function onInit() {
-        authorsService.getAuthor($routeParams.id)
+        alert("AuthorDetailController.onInit " + JSON.stringify($routeParams));
+        authorsService.getAuthor($routeParams.authorId)
           .then(function (data) {
             ctrl.author = data;
-            getAuthorBook(data.id)
+            // getAuthorBook(data.id)
           });
       }
   

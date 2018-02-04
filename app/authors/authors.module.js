@@ -2,6 +2,5 @@
   'use strict';
 
   angular
-    .module('app.authors', [      
-    ]);
+    .module('app.authors', []);
 })(window.angular);
