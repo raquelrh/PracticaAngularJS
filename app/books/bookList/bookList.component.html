@@ -1,0 +1,7 @@
+<div ng-repeat="book in $ctrl.books">
+  <hr>
+  <book book="book"></book>
+  <hr>
+  <button type="button" ng-click="$ctrl.viewBookDetails(book.ID)">Detalles</button>
+  <hr>
+</div>
