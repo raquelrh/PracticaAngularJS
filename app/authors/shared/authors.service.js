@@ -9,6 +9,7 @@
 
     function authorsService($http) {
         var urlRoot = "https://fakerestapi.azurewebsites.net/api/";
+        
         var service = {
             getAuthor: getAuthor,
             getAuthors: getAuthors,
@@ -30,8 +31,7 @@
         }
 
         function getBooksAuthor(bookId) {
-            alert ("getBooksAuthor " +bookId );
-            return $http.get('https://fakerestapi.azurewebsites.net/Authors/books/' + bookId)
+            return $http.get(urlRoot + 'Books/')
                 .then(complete)
                 .catch(failed);
         }
