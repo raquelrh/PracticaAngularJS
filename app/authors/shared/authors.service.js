@@ -12,7 +12,7 @@
         var service = {
             getAuthor: getAuthor,
             getAuthors: getAuthors,
-            // getBookAuthors: getBookAuthors
+            getBooksAuthor: getBooksAuthor,
         };
 
         return service;
@@ -29,11 +29,12 @@
                 .catch(failed);
         }
 
-        // function getBookAuthors(bookId) {
-        //     return $http.get(urlRoot + 'Authors/books/' + bookId)
-        //         .then(complete)
-        //         .catch(failed);
-        // }
+        function getBooksAuthor(bookId) {
+            alert ("getBooksAuthor " +bookId );
+            return $http.get('https://fakerestapi.azurewebsites.net/Authors/books/' + bookId)
+                .then(complete)
+                .catch(failed);
+        }
 
         function complete(response) {
             return response.data;

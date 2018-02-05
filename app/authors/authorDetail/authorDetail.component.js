@@ -23,20 +23,21 @@
       ctrl.$onInit = onInit;
   
       function onInit() {
-        alert("AuthorDetailController.onInit " + JSON.stringify($routeParams));
+        // alert("AuthorDetailController.onInit " + JSON.stringify($routeParams));
         authorsService.getAuthor($routeParams.authorId)
           .then(function (data) {
             ctrl.author = data;
-            // getAuthorBook(data.id)
+            getBooksAuthor(data.IDBook)
           });
       }
   
-      // function getAuthorBook(id) {
-      //   authorsService.getAuthorBook(id)
-      //     .then(function (data) {
-      //       ctrl.book = data;
-      //     });
-      //}
+      function getBooksAuthor(id) {
+        // alert("getBooks IdBOOK " + id);
+        authorsService.getBooksAuthor(id)
+          .then(function (data) {
+            ctrl.books = data;
+          });
+        }    
     }
   })(window.angular);
   
