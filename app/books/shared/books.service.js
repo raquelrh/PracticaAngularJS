@@ -33,15 +33,15 @@
     }
 
     function postBook(book) {
-      return $http.post(urlRoot + 'Books/')
+      return $http.post(urlRoot + 'Books/', book)
         .then(completePost)
         .catch(failed);
     }
 
     function completePost(response) {
-      if (response.data != null && response.data.ID != null) {
+      /*if (response.data != null && response.data.ID != null) {
         alert("Nuevo libro creado correctamente con ID: " + response.data.ID);
-      }
+      }*/
       return response.data;
     }
 

@@ -1,8 +1,8 @@
 <form name="bookCreate">
   <table>
     <tr>
-      <!-- <th>ID</th>
-      <td>{{$ctrl.book.ID}}</td> -->
+      <th>ID</th>
+      <td id="tdIdBook">{{$ctrl.book.ID}}</td>
       <th>Título</th>
       <td><input type="text" required ng-model="$ctrl.book.Title"></td>
       <th>Nº de páginas</th>
@@ -10,7 +10,7 @@
     </tr>
     <tr>
       <th>Fecha de publicación</th>
-      <td colspan="5"><input type="date" required ng-model="$ctrl.book.PublishDate"></td>
+      <td colspan="5"><input type="date" required ng-model="$ctrl.book.PublishDate" value="{{$ctrl.book.PublishDate}}"></td>
     </tr>
     <tr>
       <th>Descripción</th>

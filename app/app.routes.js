@@ -13,11 +13,11 @@
       .when('/books', {
         template: '<book-page></book-page>'
       })
-      .when('/books/:bookId', {
-        template: '<book-detail></book-detail>'
-      })
       .when('/books/create', {
         template: '<book-create></book-create>'
+      })
+      .when('/books/:bookId', {
+        template: '<book-detail></book-detail>'
       })
       .when('/authors', {
         template: '<author-page></author-page>'

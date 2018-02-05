@@ -40,9 +40,9 @@
       function completed(response) {
         if (response != null && response.ID != null) {
           alert("Nuevo libro creado correctamente con ID: " + response.ID);
-          $location.path('/books/' + response.ID);
+          book.ID = response.ID;
         } else {
-          alert("Hubo un error en la creación del libro: " + JSON.stringify(data));
+          alert("Hubo un error en la creación del libro: " + JSON.stringify(response));
         }
       }
     }
