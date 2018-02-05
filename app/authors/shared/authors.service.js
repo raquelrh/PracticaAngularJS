@@ -12,8 +12,7 @@
         
         var service = {
             getAuthor: getAuthor,
-            getAuthors: getAuthors,
-            getBooksAuthor: getBooksAuthor,
+            getAuthors: getAuthors,                        
         };
 
         return service;
@@ -30,11 +29,6 @@
                 .catch(failed);
         }
 
-        function getBooksAuthor(bookId) {
-            return $http.get(urlRoot + 'Books/')
-                .then(complete)
-                .catch(failed);
-        }
 
         function complete(response) {
             return response.data;

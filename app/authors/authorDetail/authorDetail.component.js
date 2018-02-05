@@ -27,17 +27,9 @@
         authorsService.getAuthor($routeParams.authorId)
           .then(function (data) {
             ctrl.author = data;
-            getBooksAuthor(data.IDBook)
           });
       }
   
-      function getBooksAuthor(id) {
-        // alert("getBooks IdBOOK " + id);
-        authorsService.getBooksAuthor(id)
-          .then(function (data) {
-            ctrl.books = data;
-          });
-        }    
     }
   })(window.angular);
   
