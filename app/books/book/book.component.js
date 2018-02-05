@@ -16,5 +16,16 @@
     return component;
   }
 
-  function BookController() {}
+  BookController.$inject = [
+    '$location',
+  ];
+
+  function BookController($location) {
+    var ctrl = this;
+    ctrl.$onInit = onInit;
+
+    function onInit() {
+      //alert("BookController.onInit.location=" + $location);
+    }
+  }
 })(window.angular);

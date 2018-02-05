@@ -2,5 +2,7 @@
   'use strict';
 
   angular
-    .module('app.books', []);
+    .module('app.books', [
+      'app.core'
+    ]);
 })(window.angular);

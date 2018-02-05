@@ -19,42 +19,28 @@
   
     function AuthorPageController(authorsService) {
       var ctrl = this;
-      // ctrl.onFilter = onFilter;
-      // ctrl.onOrderBy = onOrderBy;
+      ctrl.onFilter = onFilter;
       ctrl.$onInit = onInit;
   
-      // function onFilter(filter) {
-      //   ctrl.filter = filter;
-      // }
-  
-      // function onOrderBy(option) {
-      //   ctrl.orderBy = option;
-      // }
+      function onFilter(filter) {
+        ctrl.filter = filter;
+      }
   
       function onInit() {
+        //Campos para filtrar
+        ctrl.fields = {
+          ID: '',
+          IDBook: '',
+          FirstName: '',
+          LastName: ''
+        };
+
+        //Listado de autores    
         authorsService.getAuthors()
           .then(function(data) {
             ctrl.authors = data;
         });
-      }
-
-      // function onInit() {
-      //   ctrl.fields = {
-      //     FirstName: '',
-      //     LastName: ''
-      //   };
-        // ctrl.options = [
-        //   {
-        //     text: 'FirstName',
-        //     value: 'firstname'
-        //   }, {
-        //     text: 'lastname',
-        //     value: 'lastname'
-        //   }
-        // ];
-  
-        // 
-      //}
+      }     
     }
   })(window.angular);
   

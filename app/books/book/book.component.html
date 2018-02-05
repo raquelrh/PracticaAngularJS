@@ -9,7 +9,7 @@
   </tr>
   <tr>
     <th>Fecha de publicación</th>
-    <td colspan="5">{{$ctrl.book.PublishDate}}</td>
+    <td colspan="5"><time datetime="{{$ctrl.book.PublishDate}}">{{$ctrl.book.PublishDate | date:'dd/MM/yyyy'}}</time></td>
   </tr>
   <tr>
     <th>Descripción</th>

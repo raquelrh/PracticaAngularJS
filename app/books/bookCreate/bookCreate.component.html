@@ -1,0 +1,28 @@
+<form name="bookCreate">
+  <table>
+    <tr>
+      <th>ID</th>
+      <td id="tdIdBook">{{$ctrl.book.ID}}</td>
+      <th>Título</th>
+      <td><input type="text" required ng-model="$ctrl.book.Title"></td>
+      <th>Nº de páginas</th>
+      <td><input type="number" required ng-model="$ctrl.book.PageCount"></td>
+    </tr>
+    <tr>
+      <th>Fecha de publicación</th>
+      <td colspan="5"><input type="date" required ng-model="$ctrl.book.PublishDate" value="{{$ctrl.book.PublishDate}}"></td>
+    </tr>
+    <tr>
+      <th>Descripción</th>
+      <td colspan="5"><textarea ng-model="$ctrl.book.Description"></textarea></td>
+    </tr>
+    <tr>
+      <th>Extracto</th>
+      <td colspan="5"><textarea ng-model="$ctrl.book.Excerpt"></textarea></td>
+    </tr>
+  </table>
+  <hr>
+  <button type="submit" ng-click="$ctrl.submit($ctrl.book)" ng-disabled="bookCreate.$invalid">Crear</button>
+  <button type="button" ng-click="$ctrl.viewBookList()">Listado</button>
+  <hr>
+</form>

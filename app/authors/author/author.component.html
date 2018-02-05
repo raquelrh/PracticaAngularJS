@@ -1,7 +1,14 @@
-<hr>
-<div>
-  ID: {{$ctrl.author.ID}} <br/>
-  IDBook: {{$ctrl.author.IDBook}} <br/>
-  Nombre: {{$ctrl.author.FirstName}} <br/>
-  Apellido: {{$ctrl.author.LastName}} <br/>
-</div> 
+<table>
+  <tr>
+    <th>ID (de Autor)</th>
+    <td>{{$ctrl.author.ID}}</td>
+    <th>IDBook</th>
+    <td>{{$ctrl.author.IDBook}} </td>
+  </tr>
+  <tr>
+    <th>FirstName</th>
+    <td>{{$ctrl.author.FirstName}}</td>
+    <th>LastName</th>
+    <td>{{$ctrl.author.LastName}}</td>    
+  </tr>
+</table>

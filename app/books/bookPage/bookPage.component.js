@@ -27,6 +27,7 @@
           ctrl.books = data;
         });
     }
+
   }
 
 })(window.angular);

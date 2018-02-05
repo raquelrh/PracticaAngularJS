@@ -10,9 +10,8 @@
         templateUrl: '/app/authors/authorList/authorList.component.html',
         controller: AuthorListController,
         bindings: {
-          authors: '<'
-          // filter: '<',
-          // orderBy: '<'
+          authors: '<',
+          filter: '<',
         }
       };
       return component;

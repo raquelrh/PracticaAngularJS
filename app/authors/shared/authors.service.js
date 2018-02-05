@@ -30,7 +30,7 @@
         }
 
         // function getBookAuthors(bookId) {
-        //     return $http.get(urlRoot + 'authors/books/' + bookId)
+        //     return $http.get(urlRoot + 'Authors/books/' + bookId)
         //         .then(complete)
         //         .catch(failed);
         // }
