@@ -28,8 +28,16 @@
       booksService.getBook($routeParams.bookId)
         .then(function(data) {
           ctrl.book = data;
+          getAuthorsBook(data.ID)
         });
     }
+
+    function getAuthorsBook(id) {
+      booksService.getAuthorsBook(id)
+        .then(function (data) {
+          ctrl.authors = data;
+        });
+      }
 
     function viewBookList() {
       $location.path('/books');

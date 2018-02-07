@@ -16,6 +16,7 @@
       getBooks: getBooks,
       getBook: getBook,
       postBook: postBook,
+      getAuthorsBook: getAuthorsBook,
     }
 
     return service;
@@ -36,6 +37,12 @@
       return $http.post(urlRoot + 'Books/', book)
         .then(completePost)
         .catch(failed);
+    }
+
+    function getAuthorsBook(bookId) {
+      return $http.get('https://fakerestapi.azurewebsites.net/authors/books/' + bookId)
+          .then(complete)
+          .catch(failed);
     }
 
     function completePost(response) {

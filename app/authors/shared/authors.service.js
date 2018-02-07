@@ -9,10 +9,10 @@
 
     function authorsService($http) {
         var urlRoot = "https://fakerestapi.azurewebsites.net/api/";
+        
         var service = {
             getAuthor: getAuthor,
-            getAuthors: getAuthors,
-            // getBookAuthors: getBookAuthors
+            getAuthors: getAuthors,                        
         };
 
         return service;
@@ -29,11 +29,6 @@
                 .catch(failed);
         }
 
-        // function getBookAuthors(bookId) {
-        //     return $http.get(urlRoot + 'Authors/books/' + bookId)
-        //         .then(complete)
-        //         .catch(failed);
-        // }
 
         function complete(response) {
             return response.data;

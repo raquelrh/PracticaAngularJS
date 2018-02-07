@@ -23,20 +23,13 @@
       ctrl.$onInit = onInit;
   
       function onInit() {
-        alert("AuthorDetailController.onInit " + JSON.stringify($routeParams));
+        // alert("AuthorDetailController.onInit " + JSON.stringify($routeParams));
         authorsService.getAuthor($routeParams.authorId)
           .then(function (data) {
             ctrl.author = data;
-            // getAuthorBook(data.id)
           });
       }
   
-      // function getAuthorBook(id) {
-      //   authorsService.getAuthorBook(id)
-      //     .then(function (data) {
-      //       ctrl.book = data;
-      //     });
-      //}
     }
   })(window.angular);
   
