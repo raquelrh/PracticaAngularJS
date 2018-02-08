@@ -1,6 +1,6 @@
 # Práctica AngularJS
 ## Grupo Avengers
 ### Componentes
-+ Raquel Rodríguez
-+ Hertor Rodríguez
-+ Oscar Pérez
++ Raquel Rodríguez Hernández
++ Héctor Rodríguez Iglesias
++ Óscar Pérez Riaño
