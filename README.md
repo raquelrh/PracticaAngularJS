@@ -6,6 +6,6 @@ Desarrollo de una SPA (Single Page Application) con el Framework AngularJS que h
 
 ## Grupo Avengers
 ### Componentes
-+ Raquel Rodríguez Hernández
-+ Héctor Rodríguez Iglesias
-+ Óscar Pérez Riaño
++ Raquel Rodríguez Hernández [[@raquelrh](https://github.com/raquelrh)]
++ Héctor Rodríguez Iglesias [[@hectorri](https://github.com/hectorri)]
++ Oscar Pérez Riaño [[@osperi](https://github.com/osperi)]
